@@ -1,0 +1,57 @@
+<!-- Employee Salary Calculator
+
+Create a program to calculate the annual salary of an employee.
+
+- Declare variables to store the following information:
+
+    Basic Salary (Number)
+    House Rent Allowance (HRA) (Number)
+    Other Allowances (Number)
+
+- Write a function to calculate the total monthly salary and then the annual salary.
+- Initialize these variables with sample data.
+- Display the results using console.log() and innerHTML. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+     <h1>Annual Salay Calculator</h1>
+     <p id="Basic"></p>
+     <p id="hra"></p>
+     <p id="Other"></p>
+     <p id="Total_Annual_Salary"></p>
+
+    
+
+    <script>
+        let basic_Salary=5000;
+let HRA=10000;
+let Other_Allowances=5000;
+
+function calculateAnnualSalay(basic_Salary,HRA,Other_Allowances){
+    let monthlySalary=basic_Salary+HRA+Other_Allowances;
+    let AnnualSalary=monthlySalary*12;
+    return AnnualSalary;
+}
+
+let annual_Salary=calculateAnnualSalay(basic_Salary,HRA,Other_Allowances);
+console.log("Basic Salary: ",basic_Salary);
+console.log("HRA: ",HRA);
+console.log("Other Allowances: ",Other_Allowances);
+console.log("Total Annual Salay: ",annual_Salary);
+
+document.getElementById('Basic').innerHTML=(`Basic Salary: ${basic_Salary}`);
+document.getElementById('hra').innerHTML=(`HRA: ${HRA}`);
+document.getElementById('Other').innerHTML=(`Other Allowances: ${Other_Allowances}`);
+document.getElementById('Total_Annual_Salary').innerHTML=(`total Annual Salar: ${annual_Salary}`);
+    </script>
+
+</body>
+</html>

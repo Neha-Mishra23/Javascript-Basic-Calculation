@@ -1,0 +1,40 @@
+<!-- 26) Simple Calculator
+
+- Create a simple calculator that can add, subtract, multiply, and divide two numbers.
+- Declare variables to store two numbers and the result.
+- Initialize these variables with sample data.
+- Perform addition, subtraction, multiplication, and division operations.
+- Display the results using console.log() and innerHTML. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <div id="result"></div>
+
+    <script>
+        let number1 = 10;   
+        let number2 = 5;   
+        let result;
+
+        result = number1 + number2;
+        console.log(`${number1} + ${number2} = ${result}`);
+        document.getElementById("result").innerHTML += `<p>${number1} + ${number2} = ${result}</p>`;
+
+        result = number1 - number2;
+        console.log(`${number1} - ${number2} = ${result}`);
+        document.getElementById("result").innerHTML += `<p>${number1} - ${number2} = ${result}</p>`;
+
+        result = number1 * number2;
+        console.log(`${number1} * ${number2} = ${result}`);
+        document.getElementById("result").innerHTML += `<p>${number1} * ${number2} = ${result}</p>`;
+
+        result = number1 / number2;
+        console.log(`${number1} / ${number2} = ${result}`);
+        document.getElementById("result").innerHTML += `<p>${number1} / ${number2} = ${result}</p>`;
+    </script>
+</body>
+</html>

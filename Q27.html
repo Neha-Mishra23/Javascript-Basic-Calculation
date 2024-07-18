@@ -1,0 +1,40 @@
+<!-- 27) Temperature Converter
+
+Create a program to convert temperature from Celsius to Fahrenheit and vice versa.
+
+- Declare variables to store temperature in Celsius and Fahrenheit.
+- Write functions to convert Celsius to Fahrenheit and Fahrenheit to Celsius.
+- Initialize the temperature variables with sample data.
+- Display the results using console.log() and innerHTML. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <div id="result"></div>
+
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9;
+        }
+
+        let celsiusTemperature = 20;     
+        let fahrenheitTemperature = 68; 
+
+        let convertedToFahrenheit = celsiusToFahrenheit(celsiusTemperature);
+        console.log(`${celsiusTemperature}°C = ${convertedToFahrenheit}°F`);
+        document.getElementById("result").innerHTML += `<p>${celsiusTemperature}°C = ${convertedToFahrenheit}°F</p>`;
+
+        let convertedToCelsius = fahrenheitToCelsius(fahrenheitTemperature);
+        console.log(`${fahrenheitTemperature}°F = ${convertedToCelsius}°C`);
+        document.getElementById("result").innerHTML += `<p>${fahrenheitTemperature}°F = ${convertedToCelsius}°C</p>`;
+    </script>
+</body>
+</html>
